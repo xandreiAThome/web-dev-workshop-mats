@@ -1,0 +1,7 @@
+html,
+body {
+  /* Showcase that default html has margins in the body \ */
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
