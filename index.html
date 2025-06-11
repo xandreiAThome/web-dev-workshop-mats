@@ -5,59 +5,64 @@
 <!-- CSS WILL BE DONE LAST SHOWCASE FIRST HTML -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- showcase google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <!-- <style>
-      Body {
-        font-size: 32px;
-      }
-    </style> -->
-  </head>
-  <body>
-    <nav>
-      <!-- showcase other features of emmet -->
-      <!-- ul>li*3>a -->
 
-      <!-- Showcase inline styling -->
-      <!-- And then showcase styling in the <style> tag and/or the css file -->
-      <ul style="list-style: none">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Products</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- showcase google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 
-    <main>
+</head>
+
+<body>
+  <nav>
+    <!-- showcase other features of emmet -->
+    <!-- ul>li*3>a -->
+
+    <!-- Showcase inline styling -->
+    <!-- And then showcase styling in the <style> tag and/or the css file -->
+    <ul style="list-style: none">
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Products</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div id="container">
       <section id="desc">
         <h1>Ride towards the Future</h1>
-        <h3>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
-        </h3>
-        <button>Buy Now</button>
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <p>Oh, excuse me! I am a scientist. My name is Colress. The theme of my research is:</p>
+          <b>"Bringing out the power of Pokémon."</b>
+          <p>Bringing out the power of Pokémon! Is it possible to bring out their maximum power through the bond they
+            share with their Trainers? Or is there some other, different method? I'd like to test my theory by battling
+            with you. Do you find this acceptable?</p>
+        </div>
+        <div id="buttons">
+          <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">Yes</a>
+          <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">No</a>
+        </div>
       </section>
       <section id="showcase">
         <!-- showcase image tag -->
-        <img src="./public/bike-13078.png" alt="big bike" />
-        <a href="https://www.freepnglogos.com/images/bike-13078.html"
-          >Get it on honda cbr sport bike png image
+        <img id="img" src="./public/image/Colress_B2W2.png" alt="Colress B2W2" height="250" />
+        <a href="https://www.freepnglogos.com/images/bike-13078.html">
+          <span style="font-style: italic; font-size: 0.5rem;">Taken from Bulbapedia</span>
         </a>
       </section>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <p>&copy; 2025 Ellexandrei Esponilla. All rights reserved.</p>
-    </footer>
-  </body>
+  <footer>
+    <p>&copy; 2025 Ellexandrei Esponilla. All rights reserved.</p>
+  </footer>
+</body>
+
 </html>

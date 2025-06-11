@@ -1,7 +1,131 @@
-html,
+/* 
+  This is CSS's way of doing variables
+  To use them you can use the var() function
+  Example: background-color: var(--primary-color);
+ */
+:root {
+  --background-color: #121212;
+  --primary-color: #60a1b8;
+  --secondary-color: #3e6978;
+}
+
+/* Good practice to do this so measurements are more precise */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  /* This is to standardize fonts throught the page */
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+  background-image: url("public/image/wave-haikei.svg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 body {
   /* Showcase that default html has margins in the body \ */
   height: 100%;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 
+Navigation stuff
+ */
+
+nav {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+li, li>a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+li>a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex-grow: 1;
+  width: 50%;
+  min-width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  gap: 2rem;
+
+  border-radius: 1rem;
+  background-color: var(--primary-color);
+  border: 0.25rem solid var(--secondary-color);
+}
+
+
+main section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+#desc {
+  width: fit-content;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#buttons>button, #buttons>a {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+section#showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  font-style: italic;
+  text-align: center;
 }
