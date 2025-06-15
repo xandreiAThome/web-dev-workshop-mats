@@ -1,42 +1,31 @@
-/* 
-  This is CSS's way of doing variables
-  To use them you can use the var() function
-  Example: background-color: var(--primary-color);
- */
+/* showcase a debugging tip for finding overflowing elements */
+/* * {
+  outline: 1px solid red !important;
+} */
+
 :root {
-  --background-color: #121212;
-  --primary-color: #60a1b8;
-  --secondary-color: #3e6978;
+  --button-color: #121212;
 }
 
 /* Good practice to do this so measurements are more precise */
-* {
-  box-sizing: border-box;
+html,
+body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 
   /* This is to standardize fonts throught the page */
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-html {
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--background-color);
-  background-image: url("public/image/wave-haikei.svg");
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-body {
-  /* Showcase that default html has margins in the body \ */
-  height: 100%;
+  color: black;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+html {
+  background-image: url("public/image/layered-peaks-haikei.svg");
+  background-size: cover;
+  background-position: bottom;
 }
 
 /* 
@@ -45,48 +34,37 @@ Navigation stuff
 
 nav {
   width: 100%;
-  background-color: var(--primary-color);
-  padding: 0.5rem;
 }
 
-ul {
+#nav-links {
   list-style: none;
   display: flex;
+  gap: 0 10rem;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  padding: 0;
 }
 
-li, li>a {
-  color: white;
+li,
+li > a {
+  color: black;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
-li>a:hover {
+li > a:hover {
   text-decoration: underline;
+}
+/* show css specificity */
+a:hover {
+  text-decoration: overline;
 }
 
 main {
-  flex-grow: 1;
-  width: 50%;
-  min-width: 50rem;
   display: flex;
+  flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
-
-#container {
-  display: flex;
-  flex-direction: row;
-  padding: 1rem;
-  gap: 2rem;
-
-  border-radius: 1rem;
-  background-color: var(--primary-color);
-  border: 0.25rem solid var(--secondary-color);
-}
-
 
 main section {
   display: flex;
@@ -96,36 +74,91 @@ main section {
 }
 
 #desc {
-  width: fit-content;
-}
-
-#buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
-#buttons>button, #buttons>a {
-  background-color: var(--secondary-color);
+#desc > h4 {
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+#desc > h1 {
+  font-size: 5rem;
+  margin: 0;
+  letter-spacing: 1rem;
+}
+
+#desc > button {
+  background-color: var(--button-color);
+  margin-top: 1.5rem;
   text-decoration: none;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 10rem;
+  transition: transform 0.1s ease-in;
 }
 
-section#showcase {
+#desc > button:hover {
+  transform: scale(1.1);
+}
+
+#showcase {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-footer {
+#img--container > img {
+  animation: intro 1s ease-in-out 1 forwards;
+  position: relative;
+  /* animation: 3s ease-in 1s infinite reverse both running slide-in; */
+}
+
+#img--container {
+  position: relative;
+}
+
+#img--container::after {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(12deg);
+  width: 80%;
+  height: 48px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+#showcase > a {
+  color: white;
+  text-decoration-color: white;
+}
+
+@keyframes intro {
+  from {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+footer p {
+  color: white;
   width: 100%;
-  background-color: var(--primary-color);
-  padding: 1rem;
   font-style: italic;
   text-align: center;
 }
