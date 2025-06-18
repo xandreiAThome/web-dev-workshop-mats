@@ -10,6 +10,7 @@
 /* Good practice to do this so measurements are more precise */
 html,
 body {
+  /* html, and body tag have default margins */
   margin: 0;
   padding: 0;
   height: 100%;
@@ -44,14 +45,13 @@ nav {
   padding: 0;
 }
 
-li,
-li > a {
+#nav-links > li > a {
   color: black;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
-li > a:hover {
+#nav-links > li > a:hover {
   text-decoration: underline;
 }
 /* show css specificity */
@@ -90,22 +90,26 @@ main section {
   letter-spacing: 1rem;
 }
 
-#desc > button {
+#desc > p {
+  font-size: 1.2rem;
+}
+
+.custom-btn {
   background-color: var(--button-color);
   margin-top: 1.5rem;
   text-decoration: none;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   width: 10rem;
   transition: transform 0.1s ease-in;
 }
 
-#desc > button:hover {
+.custom-btn:hover {
   transform: scale(1.1);
 }
 
@@ -161,4 +165,6 @@ footer p {
   width: 100%;
   font-style: italic;
   text-align: center;
+  /* padding: 1rem; */
+  /* showcase overflow */
 }
